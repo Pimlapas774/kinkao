@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinkao Restaurant Service Website</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+<style>
+    .head_menu{
+        background-color: black;
+        color: white;
+        height: 100px;
+        width: 100%;
+        padding: 25px;
+        margin-top: 0px;
+        position: fixed;
+        z-index: 100;
+    }
+    .content{
+        margin-top: auto;
+        padding-top: 150px;
+    }
+    body{
+        margin: 0px;
+        padding 0px;
+    }
+
+</style>
+<body>
+    <div th:insert="fragments/header :: header"></div>
+    <div class="head_menu">
+        <div class="container">
+            <h1 class="display-6">WELCOME TO KINKAO</h1>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <p th:text="| ${greeting}, ${user} |"></p>
+        </div>
+    </div>
+
+</body>
+</html>
